@@ -219,6 +219,114 @@ U(i,j,k) = COEF(0,i,j,k)*V(i,j,k) \
 
 
 /*
+ * 3D7P const coef
+ */
+#ifdef FUNC_BODY
+#undef FUNC_BODY
+#endif
+#define FUNC_BODY() { \
+ux[i] = 0.64*vx[i] \
++0.06*(vx[i-nnxy]+vx[i-nnx]\
++vx[i-1]+vx[i+nnxy] \
++vx[i+nnx]+vx[i+1]); \
+}
+
+#ifdef FUNC_NAME
+#undef FUNC_NAME
+#endif
+#define FUNC_NAME custom_3d7p_const_coef
+
+#include "stencils_list.h"
+
+
+/*
+ * 3D7P origin symmetry vari coef
+ */
+#ifdef FUNC_BODY
+#undef FUNC_BODY
+#endif
+#define FUNC_BODY() { \
+ux[i] = COEF(0,i,j,k)*vx[i] \
++COEF(1,i,j,k)*(vx[i-nnxy]+vx[i-nnx]\
++vx[i-1]+vx[i+nnxy] \
++vx[i+nnx]+vx[i+1]); \
+}
+
+#ifdef FUNC_NAME
+#undef FUNC_NAME
+#endif
+#define FUNC_NAME custom_3d7p_origin_symmetry_vari_coef
+
+#include "stencils_list.h"
+
+
+/*
+ * wave3D(r=1)
+ */
+#ifdef FUNC_BODY
+#undef FUNC_BODY
+#endif
+#define FUNC_BODY() { \
+ux[i] = ((real_t) (2.0))*vx[i] - ROC2(i,j,k) \
++0.1*(vx[i-1]+vx[i+1]-2.0*vx[i]) \
++0.1*(vx[i-nnx]+vx[i+nnx]-2.0*vx[i]) \
++0.1*(vx[i-nnxy]+vx[i+nnxy]-2.0*vx[i]) \
++0.1*COEF(0,i,j,k); \
+}
+
+#ifdef FUNC_NAME
+#undef FUNC_NAME
+#endif
+#define FUNC_NAME custom_wave3D_r1
+
+#include "stencils_list.h"
+
+
+/*
+ * wave3D(r=2)
+ */
+#ifdef FUNC_BODY
+#undef FUNC_BODY
+#endif
+#define FUNC_BODY() { \
+ux[i] = ((real_t) (2.0))*vx[i] - ROC2(i,j,k) \
++0.1*(vx[i-2]+vx[i-1]+vx[i+1]+vx[i+2]-4.0*vx[i]) \
++0.1*(vx[i-2*nnx]+vx[i-nnx]+vx[i+nnx]+vx[i+2*nnx]-4.0*vx[i]) \
++0.1*(vx[i-2*nnxy]+vx[i-nnxy]+vx[i+nnxy]+vx[i+2*nnxy]-4.0*vx[i]) \
++0.1*COEF(0,i,j,k); \
+}
+
+#ifdef FUNC_NAME
+#undef FUNC_NAME
+#endif
+#define FUNC_NAME custom_wave3D_r2
+
+#include "stencils_list.h"
+
+
+/*
+ * wave3D(r=3)
+ */
+#ifdef FUNC_BODY
+#undef FUNC_BODY
+#endif
+#define FUNC_BODY() { \
+ux[i] = ((real_t) (2.0))*vx[i] - ROC2(i,j,k) \
++0.1*(vx[i-3]+vx[i-2]+vx[i-1]+vx[i+1]+vx[i+2]+vx[i+3]-6.0*vx[i]) \
++0.1*(vx[i-3*nnx]+vx[i-2*nnx]+vx[i-nnx]+vx[i+nnx]+vx[i+2*nnx]+vx[i+3*nnx]-6.0*vx[i]) \
++0.1*(vx[i-3*nnxy]+vx[i-2*nnxy]+vx[i-nnxy]+vx[i+nnxy]+vx[i+2*nnxy]+vx[i+3*nnxy]-6.0*vx[i]) \
++0.1*COEF(0,i,j,k); \
+}
+
+#ifdef FUNC_NAME
+#undef FUNC_NAME
+#endif
+#define FUNC_NAME custom_wave3D_r3
+
+#include "stencils_list.h"
+
+
+/*
  * ISO Box stencil 2nd-order-in-space-1st-order-in-time with constant coefficient
  */
 #ifdef FUNC_BODY
@@ -265,6 +373,11 @@ struct StencilInfo stencil_info_list[] = {
     {"star", 1, 1, 6,  STAR, VARIABLE_COEFFICIENT_AXSYM, REGULAR},
     {"star", 4, 1, 15, STAR, VARIABLE_COEFFICIENT_AXSYM, REGULAR},
     {"star", 1, 1, 9 , STAR, VARIABLE_COEFFICIENT_NOSYM, REGULAR},
+    {"star", 1, 1, 2,  STAR, CONSTANT_COEFFICIENT, REGULAR},
+    {"star", 1, 1, 4,  STAR, VARIABLE_COEFFICIENT, REGULAR},
+    {"star", 1, 2, 4,  STAR, VARIABLE_COEFFICIENT, REGULAR},
+    {"star", 2, 2, 4,  STAR, VARIABLE_COEFFICIENT, REGULAR},
+    {"star", 3, 2, 4,  STAR, VARIABLE_COEFFICIENT, REGULAR},
     {"star", 1, 1, 40, STAR, SOLAR_COEFFICIENT, SOLAR},
     {"box",  1, 1, 2,  BOX,  CONSTANT_COEFFICIENT, REGULAR},
     {0, 0, 0, 0, 0, 0, 0},
@@ -277,6 +390,11 @@ spt_blk_func_t spt_blk_func_list[] = {
     iso_ref_2space_1time_var_axsym,
     iso_ref_8space_1time_var_axsym,
     iso_ref_2space_1time_var_nosym,
+    custom_3d7p_const_coef,
+    custom_3d7p_origin_symmetry_vari_coef,
+    custom_wave3D_r1,
+    custom_wave3D_r2,
+    custom_wave3D_r3,
     solar,
     box_ref_2space_1time,};
 
@@ -287,6 +405,11 @@ spt_blk_func_t stat_sched_func_list[] = {
     stat_sched_iso_ref_2space_1time_var_axsym,
     stat_sched_iso_ref_8space_1time_var_axsym,
     stat_sched_iso_ref_2space_1time_var_nosym,
+    stat_sched_custom_3d7p_const_coef,
+    stat_sched_custom_3d7p_origin_symmetry_vari_coef,
+    stat_sched_custom_wave3D_r1,
+    stat_sched_custom_wave3D_r2,
+    stat_sched_custom_wave3D_r3,
     stat_sched_solar,
     stat_sched_box_ref_2space_1time,};
 
@@ -297,6 +420,11 @@ mwd_func_t swd_func_list[] = {
     swd_iso_ref_2space_1time_var_axsym,
     swd_iso_ref_8space_1time_var_axsym,
     swd_iso_ref_2space_1time_var_nosym,
+    swd_custom_3d7p_const_coef,
+    swd_custom_3d7p_origin_symmetry_vari_coef,
+    swd_custom_wave3D_r1,
+    swd_custom_wave3D_r2,
+    swd_custom_wave3D_r3,
     swd_solar,
     swd_box_ref_2space_1time,};
 
@@ -308,6 +436,11 @@ mwd_func_t mwd_func_list[] = {  /* 0 */
     mwd_iso_ref_2space_1time_var_axsym,
     mwd_iso_ref_8space_1time_var_axsym,
     mwd_iso_ref_2space_1time_var_nosym,
+    mwd_custom_3d7p_const_coef,
+    mwd_custom_3d7p_origin_symmetry_vari_coef,
+    mwd_custom_wave3D_r1,
+    mwd_custom_wave3D_r2,
+    mwd_custom_wave3D_r3,
     not_supported_mwd,
     mwd_box_ref_2space_1time,};
 
@@ -318,6 +451,11 @@ mwd_func_t femwd_func_list[] = { /* 1 */
     femwd_iso_ref_2space_1time_var_axsym,
     femwd_iso_ref_8space_1time_var_axsym,
     femwd_iso_ref_2space_1time_var_nosym,
+    femwd_custom_3d7p_const_coef,
+    femwd_custom_3d7p_origin_symmetry_vari_coef,
+    femwd_custom_wave3D_r1,
+    femwd_custom_wave3D_r2,
+    femwd_custom_wave3D_r3,
     femwd_solar,
     femwd_box_ref_2space_1time,};
 
@@ -328,6 +466,11 @@ mwd_func_t rsmwd_func_list[] = { /* 2 */
     rsmwd_iso_ref_2space_1time_var_axsym,
     rsmwd_iso_ref_8space_1time_var_axsym,
     rsmwd_iso_ref_2space_1time_var_nosym,
+    rsmwd_custom_3d7p_const_coef,
+    rsmwd_custom_3d7p_origin_symmetry_vari_coef,
+    rsmwd_custom_wave3D_r1,
+    rsmwd_custom_wave3D_r2,
+    rsmwd_custom_wave3D_r3,
     not_supported_mwd,
     rsmwd_box_ref_2space_1time,};
 
@@ -338,6 +481,11 @@ mwd_func_t rsfemwd_func_list[] = { /* 3 */
     rsfemwd_iso_ref_2space_1time_var_axsym,
     rsfemwd_iso_ref_8space_1time_var_axsym,
     rsfemwd_iso_ref_2space_1time_var_nosym,
+    rsfemwd_custom_3d7p_const_coef,
+    rsfemwd_custom_3d7p_origin_symmetry_vari_coef,
+    rsfemwd_custom_wave3D_r1,
+    rsfemwd_custom_wave3D_r2,
+    rsfemwd_custom_wave3D_r3,
     not_supported_mwd,
     rsfemwd_box_ref_2space_1time,};
 
