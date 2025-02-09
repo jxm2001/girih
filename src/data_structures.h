@@ -75,7 +75,7 @@
 #define MAX_CACHE_SIZE (70*1024)  // cache size in kB
 #define FLUSH_SIZE (50*1024*1024) // in bytes
 #define BOUNDARY_SRC_VAL (100.1)
-#define MAX_X_THREADS (3)
+#define MAX_X_THREADS (18)
 #define MAX_THREAD_GROUP_SIZE (18)
 #define TUNING_DIRECTION (0) // test ascending thread group size
 
