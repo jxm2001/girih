@@ -17,6 +17,9 @@
  **/
 
 #include "driver.h"
+int ierr;
+char estr[MPI_MAX_ERROR_STRING];
+int elen;
 
 int main(int argc, char** argv)
 {

@@ -32,7 +32,7 @@
 #define MARKER_START(reg) LIKWID_MARKER_START(reg)
 #define MARKER_STOP(reg) LIKWID_MARKER_STOP(reg)
 
-
+#include <omp.h>
 
 
 #ifdef USE_VTUNE
@@ -108,8 +108,8 @@ typedef float real_t;
 
 #include <stdint.h>
 
-int ierr;
-char estr[MPI_MAX_ERROR_STRING]; int elen; // for MPI error hadling macro
+extern int ierr;
+extern char estr[MPI_MAX_ERROR_STRING]; extern int elen; // for MPI error hadling macro
 
 enum Stencil_Shapes{
   STAR,
