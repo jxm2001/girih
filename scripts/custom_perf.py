@@ -38,9 +38,9 @@ def extract_data(csv_file, gstencil_s, kernel, problem_size):
         num_rows = len(reader)
         
         attributes = {"Kernel": kernel, "Method": "Girih", "Problem Size": problem_size, "GStencil/s": gstencil_s}
-        attributes[reader[86][0]] = reader[86][5]  # Row 87, Column 1 as key, Column 6 as value
+        attributes[reader[43][0]] = reader[43][5]  # Row 43, Column 1 as key, Column 6 as value (0-based index)
         
-        for j in range(193, 221):  # Rows 194 to 221 (0-based index)
+        for j in range(99, 119):  # Rows 99 to 119 (0-based index)
             attr_name = reader[j][0]
             attr_value = reader[j][4]
             attributes[attr_name] = attr_value
@@ -94,8 +94,8 @@ def main():
         likwid_csv = result_dir / f"likwid_{kernel_id}_z{zlen}.csv"
         
         command = [
-            "likwid-perfctr", "-c", "0-35", "-g", "CACHES", "-m", "-O", "-o", str(likwid_csv),
-            "numactl", "--interleave=0-1", "--physcpubind=0-35", f"{root_dir}/build_dp/mwd_kernel",
+            "likwid-perfctr", "-c", "0-59", "-g", "CACHES", "-m", "-O", "-o", str(likwid_csv),
+            "numactl", "--interleave=0-1", "--physcpubind=0-59", f"{root_dir}/build_dp/mwd_kernel",
             "--nx", str(zlen), "--ny", str(zlen), "--nz", str(zlen), "--nt", str(nt),
             "--target-kernel", str(kernel_id), "--mwd-type", str(mwd_id), "--target-ts", "2",
             "--t-dim", str(params["t_dim"]), "--thread-group-size", str(params["thread_group_size"]),
