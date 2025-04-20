@@ -75,8 +75,8 @@ def main():
             best_mwd[key] = {"mwd_id": mwd_id, "perf": perf, "params": params}
     
     nt_mapping = {400: 1000, 600: 800, 800: 600, 1000: 500}
-    kernel_id_mapping = {6:"3D7P/const-coef",
-                         7:"3D7P/origin-symmetry-vari-coef",
+    kernel_id_mapping = {6:"Heat3D/const-coef",
+                         7:"Heat3D/origin-symmetry-vari-coef",
                          8:"Wave3D/r1",
                          9:"Wave3D/r2",
                          10:"Wave3D/r3"}
