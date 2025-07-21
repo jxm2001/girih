@@ -1,0 +1,2 @@
+Running without Marker API. Activate Marker API with -m on commandline.
+ERROR: Relaxed synchronization implementations are disabled for stencil radius > 1 for performance reasons

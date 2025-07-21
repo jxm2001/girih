@@ -4,31 +4,27 @@ ROOT_DIR="$(dirname "$(dirname "$(realpath "$0")")")"
 # Ensure result directory exists
 mkdir -p "${ROOT_DIR}/result"
 
-# Define nt values for each size
-declare -A nt_values
-nt_values[400]=1000
-nt_values[600]=800
-nt_values[800]=600
-nt_values[1000]=500
-
-for ((kernel=6; kernel<=10; kernel++)); do
+for ((kernel=6; kernel<=9; kernel++)); do
     for ((mwd=0; mwd<=3; mwd++)); do
-        for size in 400 600 800 1000; do
-            done_file="${ROOT_DIR}/result/kernel_${kernel}-mwd_${mwd}-z${size}.done"
-            log_file="${ROOT_DIR}/result/kernel_${kernel}-mwd_${mwd}-z${size}.log"
+		n1=1800
+		n2=1800
+		n3=600
+		nt=1000
+		problem_size="${n1}x${n2}x${n3}x${nt}"
+		done_file="${ROOT_DIR}/result/kernel_${kernel}-mwd_${mwd}-${problem_size}.done"
+		log_file="${ROOT_DIR}/result/kernel_${kernel}-mwd_${mwd}-${problem_size}.log"
 
-            if [ -f "$done_file" ]; then
-                echo "Skipping test: kernel=$kernel, mwd=$mwd, size=$size (done file exists)"
-                continue
-            fi
+		if [ -f "$done_file" ]; then
+			echo "Skipping test: kernel=$kernel, mwd=$mwd, problem_size=$problem_size (done file exists)"
+			continue
+		fi
 
-            numactl --interleave=all --physcpubind=0-59 \
-                ${ROOT_DIR}/build_dp/mwd_kernel --nx $size --ny $size --nz $size \
-                --nt ${nt_values[$size]} --target-kernel $kernel --mwd-type $mwd --target-ts 2 \
-                &> "$log_file"
+		numactl --interleave=all --physcpubind=0-59 \
+			${ROOT_DIR}/build_dp/mwd_kernel --nz $n1 --ny $n2 --nx $n3 \
+			--nt $nt --target-kernel $kernel --mwd-type $mwd --target-ts 2 \
+			&> "$log_file"
 
-            # Mark the test as completed
-            touch "$done_file"
-        done
+		# Mark the test as completed
+		touch "$done_file"
     done
 done

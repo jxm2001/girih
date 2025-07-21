@@ -5,6 +5,13 @@ from pathlib import Path
 import csv
 import pandas as pd
 
+kernel_id_mapping = {6:"j3d7pt",
+7:"j3d13pt",
+8:"j3d27pt",
+9:"poisson"}
+
+best_mwd = {}
+
 def parse_log_file(file_path):
     perf = None
     params = {}
@@ -29,15 +36,13 @@ def parse_log_file(file_path):
     
     return perf, params if len(params) == len(patterns) else None
 
-def extract_data(csv_file, gstencil_s, kernel, problem_size):
-    elements = []
-    
+def extract_data(csv_file, gstencil_s, kernel, problem_size, ncores, numa):
     with open(csv_file, newline='', encoding='utf-8') as csvfile:
         reader = list(csv.reader(csvfile))  # Read the entire CSV file into a list
         
         num_rows = len(reader)
         
-        attributes = {"Kernel": kernel, "Method": "Girih", "Problem Size": problem_size, "GStencil/s": gstencil_s}
+        attributes = {"Kernel": kernel, "Method": "Girih", "Problem Size": problem_size, "GStencil/s": gstencil_s, "Ncores": ncores, "NUMA": numa}
         attributes[reader[43][0]] = reader[43][5]  # Row 43, Column 1 as key, Column 6 as value (0-based index)
         
         for j in range(99, 119):  # Rows 99 to 119 (0-based index)
@@ -45,81 +50,95 @@ def extract_data(csv_file, gstencil_s, kernel, problem_size):
             attr_value = reader[j][4]
             attributes[attr_name] = attr_value
             
-        elements.append(attributes)
-    
-    return elements
+        return attributes
 
-def main():
-    elements = []
+def perfTest(kernel_id, problem_size, ncores, numa):
+    data = best_mwd[(kernel_id, problem_size)]
+    
+    n1, n2, n3, nt = problem_size
+    problem_size_str = f'{n1}x{n2}x{n3}x{nt}'
+    mwd_id = data["mwd_id"]
+    params = data["params"]
+    
+    output_file = result_dir / f"likwid_{kernel_id}_{problem_size_str}.out"
+    error_file = result_dir / f"likwid_{kernel_id}_{problem_size_str}.err"
+    likwid_csv = result_dir / f"likwid_{kernel_id}_{problem_size_str}.csv"
+
+    if numa == 1:
+        numa_param = "--localalloc"
+        core_bind_param = f'0-{ncores-1}'
+    else:
+        numa_param = "--interleave=all"
+        if ncores < 60:
+            core_bind_param = f'0-{ncores//2-1},30-{30+ncores//2-1}'
+        else:
+            core_bind_param = f'0-{ncores-1}'
+    
+    command = [
+        "likwid-perfctr", "-c", f"{core_bind_param}", "-g", "CACHES", "-m", "-O", "-o", str(likwid_csv),
+        "numactl", numa_param, f"--physcpubind={core_bind_param}", f"{root_dir}/build_dp/mwd_kernel",
+        "--nz", str(n1), "--ny", str(n2), "--nx", str(n3), "--nt", str(nt),
+        "--target-kernel", str(kernel_id), "--mwd-type", str(mwd_id), "--target-ts", "2",
+        "--t-dim", str(params["t_dim"]), "--thread-group-size", str(params["thread_group_size"]),
+        "--thz", str(params["thz"]), "--thy", str(params["thy"]), "--thx", str(params["thx"]),
+        "--num-wavefronts", str(params["num_wavefronts"]), "--n-tests", "1"
+    ]
+    
+    print("Executing:", " ".join(command))
+    
+    with open(output_file, "w") as out, open(error_file, "w") as err:
+        process = subprocess.run(command, env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+        out.write(process.stdout)
+        err.write(process.stderr)
+        print("likwid-perfctr output:")
+        print(process.stdout)
+        if process.stderr:
+            print("likwid-perfctr errors:")
+            print(process.stderr)
+    
+    match = re.search(r"Total RANK0 MStencil/s MAX:\s*([\d\.]+)", process.stdout)
+    if match:
+        return extract_data(likwid_csv, float(match.group(1)) / 1000, kernel_id_mapping[kernel_id], f"{n1} {n2} {n3} {nt}", 60, 2)
+    else:
+        print("error!!!")
+        return None
+
+if __name__ == "__main__":
+    overview_res = []
+    scalability_res = []
     script_path = Path(__file__).resolve()
     root_dir = script_path.parent.parent
     result_dir = root_dir / "result"
     
-    pattern = re.compile(r"kernel_(\d+)-mwd_(\d+)-z(\d+)\.log")
+    pattern = re.compile(r"kernel_(\d+)-mwd_(\d+)-(\d+)x(\d+)x(\d+)x(\d+)\.log")
     
-    best_mwd = {}
     
     for file in result_dir.iterdir():
         match = pattern.match(file.name)
         if not match:
             continue
         
-        kernel_id, mwd_id, zlen = map(int, match.groups())
+        kernel_id, mwd_id, n1, n2, n3, nt = map(int, match.groups())
         perf, params = parse_log_file(file)
         
         if perf is None or params is None:
             continue
         
-        key = (kernel_id, zlen)
+        key = (kernel_id, (n1, n2, n3, nt))
         if key not in best_mwd or best_mwd[key]["perf"] < perf:
             best_mwd[key] = {"mwd_id": mwd_id, "perf": perf, "params": params}
     
-    nt_mapping = {400: 1000, 600: 800, 800: 600, 1000: 500}
-    kernel_id_mapping = {6:"3D7P/const-coef",
-                         7:"3D7P/origin-symmetry-vari-coef",
-                         8:"Wave3D/r1",
-                         9:"Wave3D/r2",
-                         10:"Wave3D/r3"}
-    
-    for (kernel_id, zlen), data in sorted(best_mwd.items(), key=lambda x: (x[0][0], x[0][1])):
-        if zlen not in nt_mapping:
+    for kernel_id in kernel_id_mapping.keys():
+        problem_size = (1800, 1800, 600, 1000)
+        if (kernel_id, problem_size) not in best_mwd or kernel_id not in kernel_id_mapping:
             continue
-        
-        nt = nt_mapping[zlen]
-        mwd_id = data["mwd_id"]
-        params = data["params"]
-        
-        output_file = result_dir / f"likwid_{kernel_id}_z{zlen}.out"
-        error_file = result_dir / f"likwid_{kernel_id}_z{zlen}.err"
-        likwid_csv = result_dir / f"likwid_{kernel_id}_z{zlen}.csv"
-        
-        command = [
-            "likwid-perfctr", "-c", "0-59", "-g", "CACHES", "-m", "-O", "-o", str(likwid_csv),
-            "numactl", "--interleave=0-1", "--physcpubind=0-59", f"{root_dir}/build_dp/mwd_kernel",
-            "--nx", str(zlen), "--ny", str(zlen), "--nz", str(zlen), "--nt", str(nt),
-            "--target-kernel", str(kernel_id), "--mwd-type", str(mwd_id), "--target-ts", "2",
-            "--t-dim", str(params["t_dim"]), "--thread-group-size", str(params["thread_group_size"]),
-            "--thz", str(params["thz"]), "--thy", str(params["thy"]), "--thx", str(params["thx"]),
-            "--num-wavefronts", str(params["num_wavefronts"]), "--n-tests", "1"
-        ]
-        
-        print("Executing:", " ".join(command))
-        
-        with open(output_file, "w") as out, open(error_file, "w") as err:
-            process = subprocess.run(command, env=os.environ, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-            out.write(process.stdout)
-            err.write(process.stderr)
-            print("likwid-perfctr output:")
-            print(process.stdout)
-            if process.stderr:
-                print("likwid-perfctr errors:")
-                print(process.stderr)
-        
-        match = re.search(r"Total RANK0 MStencil/s MAX:\s*([\d\.]+)", process.stdout)
-        if match:
-            elements.extend(extract_data(likwid_csv, float(match.group(1)) / 1000, kernel_id_mapping[kernel_id], f"{zlen} {zlen} {zlen} {nt}"))
-    df = pd.DataFrame(elements)
-    df.to_csv(result_dir / 'perf-girih.csv', index=False)
+        overview_res.append(perfTest(kernel_id, problem_size, 60, 2))
+    df = pd.DataFrame(overview_res)
+    df.to_csv(result_dir / 'perf-overview-girih.csv', index=False)
 
-if __name__ == "__main__":
-    main()
+    for ncores in range(6, 61, 6):
+        numa = 1 if ncores <= 30 else 2
+        problem_size = (1800, 1800, 600, 1000)
+        scalability_res.append(perfTest(6, problem_size, ncores, numa))
+    df = pd.DataFrame(scalability_res)
+    df.to_csv(result_dir / 'perf-scalability-girih.csv', index=False)
