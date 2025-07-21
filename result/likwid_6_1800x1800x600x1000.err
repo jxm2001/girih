@@ -4,3 +4,5 @@ Warning: LIKWID assumes that the application does it before the first instrument
 Warning: You can use the string in the environment variable LIKWID_THREADS to pin you application to
 Warning: to the CPUs specified after the -c command line option.
 OMP: Info #277: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #277: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+OMP: Info #277: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.

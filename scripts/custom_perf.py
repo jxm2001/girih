@@ -6,9 +6,9 @@ import csv
 import pandas as pd
 
 kernel_id_mapping = {6:"j3d7pt",
-7:"j3d13pt",
-8:"j3d27pt",
-9:"poisson"}
+                    7:"j3d13pt",
+                    8:"j3d27pt",
+                    9:"poisson"}
 
 best_mwd = {}
 
@@ -52,7 +52,7 @@ def extract_data(csv_file, gstencil_s, kernel, problem_size, ncores, numa):
             
         return attributes
 
-def perfTest(kernel_id, problem_size, ncores, numa):
+def perfTest(kernel_id, problem_size, ncores, numa, ntests):
     data = best_mwd[(kernel_id, problem_size)]
     
     n1, n2, n3, nt = problem_size
@@ -81,7 +81,7 @@ def perfTest(kernel_id, problem_size, ncores, numa):
         "--target-kernel", str(kernel_id), "--mwd-type", str(mwd_id), "--target-ts", "2",
         "--t-dim", str(params["t_dim"]), "--thread-group-size", str(params["thread_group_size"]),
         "--thz", str(params["thz"]), "--thy", str(params["thy"]), "--thx", str(params["thx"]),
-        "--num-wavefronts", str(params["num_wavefronts"]), "--n-tests", "1"
+        "--num-wavefronts", str(params["num_wavefronts"]), "--n-tests", str(ntests)
     ]
     
     print("Executing:", " ".join(command))
@@ -98,7 +98,7 @@ def perfTest(kernel_id, problem_size, ncores, numa):
     
     match = re.search(r"Total RANK0 MStencil/s MAX:\s*([\d\.]+)", process.stdout)
     if match:
-        return extract_data(likwid_csv, float(match.group(1)) / 1000, kernel_id_mapping[kernel_id], f"{n1} {n2} {n3} {nt}", 60, 2)
+        return extract_data(likwid_csv, float(match.group(1)) / 1000, kernel_id_mapping[kernel_id], f"{n1} {n2} {n3} {nt}", ncores, numa)
     else:
         print("error!!!")
         return None
@@ -132,13 +132,13 @@ if __name__ == "__main__":
         problem_size = (1800, 1800, 600, 1000)
         if (kernel_id, problem_size) not in best_mwd or kernel_id not in kernel_id_mapping:
             continue
-        overview_res.append(perfTest(kernel_id, problem_size, 60, 2))
+        overview_res.append(perfTest(kernel_id, problem_size, 60, 2, 1))
     df = pd.DataFrame(overview_res)
     df.to_csv(result_dir / 'perf-overview-girih.csv', index=False)
 
     for ncores in range(6, 61, 6):
         numa = 1 if ncores <= 30 else 2
         problem_size = (1800, 1800, 600, 1000)
-        scalability_res.append(perfTest(6, problem_size, ncores, numa))
+        scalability_res.append(perfTest(6, problem_size, ncores, numa, 3))
     df = pd.DataFrame(scalability_res)
     df.to_csv(result_dir / 'perf-scalability-girih.csv', index=False)
