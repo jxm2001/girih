@@ -69,8 +69,8 @@ def perfTest(kernel_id, problem_size, ncores, numa, ntests):
         core_bind_param = f'0-{ncores-1}'
     else:
         numa_param = "--interleave=all"
-        if ncores < 60:
-            core_bind_param = f'0-{ncores//2-1},30-{30+ncores//2-1}'
+        if ncores < 128:
+            core_bind_param = f'0-{ncores//2-1},64-{64+ncores//2-1}'
         else:
             core_bind_param = f'0-{ncores-1}'
     
@@ -132,13 +132,6 @@ if __name__ == "__main__":
         problem_size = (1800, 1800, 600, 1000)
         if (kernel_id, problem_size) not in best_mwd or kernel_id not in kernel_id_mapping:
             continue
-        overview_res.append(perfTest(kernel_id, problem_size, 60, 2, 1))
+        overview_res.append(perfTest(kernel_id, problem_size, 128, 2, 1))
     df = pd.DataFrame(overview_res)
     df.to_csv(result_dir / 'perf-overview-girih.csv', index=False)
-
-    for ncores in range(6, 61, 6):
-        numa = 1 if ncores <= 30 else 2
-        problem_size = (1800, 1800, 600, 1000)
-        scalability_res.append(perfTest(6, problem_size, ncores, numa, 3))
-    df = pd.DataFrame(scalability_res)
-    df.to_csv(result_dir / 'perf-scalability-girih.csv', index=False)

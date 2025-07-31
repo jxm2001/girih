@@ -19,7 +19,7 @@ for ((kernel=6; kernel<=9; kernel++)); do
 			continue
 		fi
 
-		numactl --interleave=all --physcpubind=0-59 \
+		numactl --interleave=all --physcpubind=0-127 \
 			${ROOT_DIR}/build_dp/mwd_kernel --nz $n1 --ny $n2 --nx $n3 \
 			--nt $nt --target-kernel $kernel --mwd-type $mwd --target-ts 2 \
 			&> "$log_file"
