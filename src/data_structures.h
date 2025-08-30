@@ -76,7 +76,7 @@
 #define FLUSH_SIZE (50*1024*1024) // in bytes
 #define BOUNDARY_SRC_VAL (100.1)
 #define MAX_X_THREADS (3)
-#define MAX_THREAD_GROUP_SIZE (30)
+#define MAX_THREAD_GROUP_SIZE (8)
 #define TUNING_DIRECTION (0) // test ascending thread group size
 
 // Use thread affinity supported by 4.0 standard

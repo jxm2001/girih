@@ -1,0 +1,780 @@
+INFO: Using maximum configured thread group size 8
+[AUTO TUNE] Any selected values for time block and number of frontlines are ignored
+[AUTO TUNE] alignment error
+[AUTO TUNE] Allocated based on diam width: 24
+[AUTO TUNE] Tuning case(s) [12] (thread group size, th_z, th_y, th_x, th_c): (1, 1, 1, 1, 1) (2, 1, 1, 2, 1) (2, 1, 2, 1, 1) (2, 2, 1, 1, 1) (4, 1, 2, 2, 1) (4, 2, 1, 2, 1) (4, 2, 2, 1, 1) (4, 4, 1, 1, 1) (8, 2, 2, 2, 1) (8, 4, 1, 2, 1) (8, 4, 2, 1, 1) (8, 8, 1, 1, 1) 
+
+[AUTO TUNE] START tune case #00: Thread group size:01  thc:01  thx:01  thy:01  thz:01  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 43982.43]  time:1.325984e-01  MLUPS:005832  cache block size:60800kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 38374.10]  time:3.546142e-01  MLUPS:013608  cache block size:60800kiB  reps:2  perf err: 14.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 36452.06]  time:5.866335e-01  MLUPS:021384  cache block size:60800kiB  reps:3  perf err:  5.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 35224.18]  time:8.278405e-01  MLUPS:029160  cache block size:60800kiB  reps:4  perf err:  3.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 34600.63]  time:1.067495e+00  MLUPS:036936  cache block size:60800kiB  reps:5  perf err:  1.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 48085.30]  time:1.212845e-01  MLUPS:005832  cache block size:72960kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 38038.84]  time:3.577397e-01  MLUPS:013608  cache block size:72960kiB  reps:2  perf err: 26.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 36548.47]  time:5.850861e-01  MLUPS:021384  cache block size:72960kiB  reps:3  perf err:  4.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 35540.06]  time:8.204826e-01  MLUPS:029160  cache block size:72960kiB  reps:4  perf err:  2.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 34986.35]  time:1.055726e+00  MLUPS:036936  cache block size:72960kiB  reps:5  perf err:  1.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 48696.81]  time:1.197614e-01  MLUPS:005832  cache block size:85120kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 38960.84]  time:3.492738e-01  MLUPS:013608  cache block size:85120kiB  reps:2  perf err: 25.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 36813.31]  time:5.808769e-01  MLUPS:021384  cache block size:85120kiB  reps:3  perf err:  5.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 35359.89]  time:8.246633e-01  MLUPS:029160  cache block size:85120kiB  reps:4  perf err:  4.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 35211.89]  time:1.048964e+00  MLUPS:036936  cache block size:85120kiB  reps:5  perf err:  0.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 47947.14]  time:1.216340e-01  MLUPS:005832  cache block size:97280kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 38704.14]  time:3.515903e-01  MLUPS:013608  cache block size:97280kiB  reps:2  perf err: 23.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 35839.22]  time:5.966648e-01  MLUPS:021384  cache block size:97280kiB  reps:3  perf err:  8.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 35574.32]  time:8.196925e-01  MLUPS:029160  cache block size:97280kiB  reps:4  perf err:  0.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 48192.15]  time:1.210156e-01  MLUPS:005832  cache block size:109440kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 38903.91]  time:3.497849e-01  MLUPS:013608  cache block size:109440kiB  reps:2  perf err: 23.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 36824.74]  time:5.806965e-01  MLUPS:021384  cache block size:109440kiB  reps:3  perf err:  5.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 35566.99]  time:8.198612e-01  MLUPS:029160  cache block size:109440kiB  reps:4  perf err:  3.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 34936.25]  time:1.057240e+00  MLUPS:036936  cache block size:109440kiB  reps:5  perf err:  1.8%
+[AUTO TUNE] COMPLETE tune case #00: Thread group size:01  thc:01  thx:01  thy:01  thz:01  t_dim:01  bs_z:04  perf:35574.32 MLUP/s
+
+[AUTO TUNE] START tune case #01: Thread group size:02  thc:01  thx:02  thy:01  thz:01  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 44765.23]  time:1.302797e-01  MLUPS:005832  cache block size:30400kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 37731.76]  time:3.606511e-01  MLUPS:013608  cache block size:30400kiB  reps:2  perf err: 18.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 36046.64]  time:5.932314e-01  MLUPS:021384  cache block size:30400kiB  reps:3  perf err:  4.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 34872.80]  time:8.361817e-01  MLUPS:029160  cache block size:30400kiB  reps:4  perf err:  3.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 34504.12]  time:1.070481e+00  MLUPS:036936  cache block size:30400kiB  reps:5  perf err:  1.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 46581.83]  time:1.251990e-01  MLUPS:005832  cache block size:36480kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 38266.56]  time:3.556107e-01  MLUPS:013608  cache block size:36480kiB  reps:2  perf err: 21.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 36568.97]  time:5.847581e-01  MLUPS:021384  cache block size:36480kiB  reps:3  perf err:  4.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 35609.55]  time:8.188815e-01  MLUPS:029160  cache block size:36480kiB  reps:4  perf err:  2.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 34593.99]  time:1.067700e+00  MLUPS:036936  cache block size:36480kiB  reps:5  perf err:  2.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 34417.96]  time:1.299089e+00  MLUPS:044712  cache block size:36480kiB  reps:6  perf err:  0.5%
+[AUTO TUNE] COMPLETE tune case #01: Thread group size:02  thc:01  thx:02  thy:01  thz:01  t_dim:01  bs_z:01  perf:34504.12 MLUP/s
+
+[AUTO TUNE] START tune case #02: Thread group size:02  thc:01  thx:01  thy:02  thz:01  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 44937.85]  time:1.297793e-01  MLUPS:005832  cache block size:30400kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 35305.18]  time:3.854391e-01  MLUPS:013608  cache block size:30400kiB  reps:2  perf err: 27.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 34153.10]  time:6.261218e-01  MLUPS:021384  cache block size:30400kiB  reps:3  perf err:  3.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 33471.12]  time:8.711988e-01  MLUPS:029160  cache block size:30400kiB  reps:4  perf err:  2.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 43378.40]  time:1.344448e-01  MLUPS:005832  cache block size:36480kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 36135.76]  time:3.765799e-01  MLUPS:013608  cache block size:36480kiB  reps:2  perf err: 20.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 35302.81]  time:6.057308e-01  MLUPS:021384  cache block size:36480kiB  reps:3  perf err:  2.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 43852.66]  time:1.329908e-01  MLUPS:005832  cache block size:42560kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 35039.89]  time:3.883574e-01  MLUPS:013608  cache block size:42560kiB  reps:2  perf err: 25.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 33702.45]  time:6.344939e-01  MLUPS:021384  cache block size:42560kiB  reps:3  perf err:  4.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 33071.97]  time:8.817133e-01  MLUPS:029160  cache block size:42560kiB  reps:4  perf err:  1.9%
+[AUTO TUNE] COMPLETE tune case #02: Thread group size:02  thc:01  thx:01  thy:02  thz:01  t_dim:01  bs_z:02  perf:35302.81 MLUP/s
+
+[AUTO TUNE] START tune case #03: Thread group size:02  thc:01  thx:01  thy:01  thz:02  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 45705.87]  time:1.275985e-01  MLUPS:005832  cache block size:36480kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 36530.34]  time:3.725123e-01  MLUPS:013608  cache block size:36480kiB  reps:2  perf err: 25.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 35673.51]  time:5.994363e-01  MLUPS:021384  cache block size:36480kiB  reps:3  perf err:  2.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 43697.61]  time:1.334627e-01  MLUPS:005832  cache block size:48640kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 36378.48]  time:3.740673e-01  MLUPS:013608  cache block size:48640kiB  reps:2  perf err: 20.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 34399.22]  time:6.216421e-01  MLUPS:021384  cache block size:48640kiB  reps:3  perf err:  5.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 33721.71]  time:8.647249e-01  MLUPS:029160  cache block size:48640kiB  reps:4  perf err:  2.0%
+[AUTO TUNE] COMPLETE tune case #03: Thread group size:02  thc:01  thx:01  thy:01  thz:02  t_dim:01  bs_z:02  perf:35673.51 MLUP/s
+
+[AUTO TUNE] START tune case #04: Thread group size:04  thc:01  thx:02  thy:02  thz:01  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 41647.78]  time:1.400315e-01  MLUPS:005832  cache block size:15200kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 34127.40]  time:3.987412e-01  MLUPS:013608  cache block size:15200kiB  reps:2  perf err: 22.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 32114.72]  time:6.658629e-01  MLUPS:021384  cache block size:15200kiB  reps:3  perf err:  6.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [001: 31632.90]  time:9.218250e-01  MLUPS:029160  cache block size:15200kiB  reps:4  perf err:  1.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 43022.98]  time:1.355555e-01  MLUPS:005832  cache block size:18240kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 35329.36]  time:3.851753e-01  MLUPS:013608  cache block size:18240kiB  reps:2  perf err: 21.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 33568.17]  time:6.370320e-01  MLUPS:021384  cache block size:18240kiB  reps:3  perf err:  5.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 32535.62]  time:8.962486e-01  MLUPS:029160  cache block size:18240kiB  reps:4  perf err:  3.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 32406.23]  time:1.139781e+00  MLUPS:036936  cache block size:18240kiB  reps:5  perf err:  0.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 44207.92]  time:1.319221e-01  MLUPS:005832  cache block size:21280kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 35903.99]  time:3.790107e-01  MLUPS:013608  cache block size:21280kiB  reps:2  perf err: 23.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 34387.98]  time:6.218451e-01  MLUPS:021384  cache block size:21280kiB  reps:3  perf err:  4.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 33343.74]  time:8.745269e-01  MLUPS:029160  cache block size:21280kiB  reps:4  perf err:  3.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [003: 32743.04]  time:1.128056e+00  MLUPS:036936  cache block size:21280kiB  reps:5  perf err:  1.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 44125.84]  time:1.321675e-01  MLUPS:005832  cache block size:24320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 36095.59]  time:3.769989e-01  MLUPS:013608  cache block size:24320kiB  reps:2  perf err: 22.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 34801.05]  time:6.144642e-01  MLUPS:021384  cache block size:24320kiB  reps:3  perf err:  3.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 34103.35]  time:8.550479e-01  MLUPS:029160  cache block size:24320kiB  reps:4  perf err:  2.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 45101.95]  time:1.293071e-01  MLUPS:005832  cache block size:27360kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 36266.43]  time:3.752231e-01  MLUPS:013608  cache block size:27360kiB  reps:2  perf err: 24.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 33913.33]  time:6.305485e-01  MLUPS:021384  cache block size:27360kiB  reps:3  perf err:  6.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [005: 34687.30]  time:8.406535e-01  MLUPS:029160  cache block size:27360kiB  reps:4  perf err:  2.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 45138.11]  time:1.292035e-01  MLUPS:005832  cache block size:30400kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 35528.71]  time:3.830141e-01  MLUPS:013608  cache block size:30400kiB  reps:2  perf err: 27.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 34692.25]  time:6.163912e-01  MLUPS:021384  cache block size:30400kiB  reps:3  perf err:  2.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [007: 45579.12]  time:1.279533e-01  MLUPS:005832  cache block size:33440kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [007: 36896.00]  time:3.688205e-01  MLUPS:013608  cache block size:33440kiB  reps:2  perf err: 23.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [007: 34926.25]  time:6.122615e-01  MLUPS:021384  cache block size:33440kiB  reps:3  perf err:  5.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [007: 33861.89]  time:8.611451e-01  MLUPS:029160  cache block size:33440kiB  reps:4  perf err:  3.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [007: 33862.72]  time:1.090757e+00  MLUPS:036936  cache block size:33440kiB  reps:5  perf err:  0.0%
+[AUTO TUNE] COMPLETE tune case #04: Thread group size:04  thc:01  thx:02  thy:02  thz:01  t_dim:01  bs_z:06  perf:34692.25 MLUP/s
+
+[AUTO TUNE] START tune case #05: Thread group size:04  thc:01  thx:02  thy:01  thz:02  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 42386.78]  time:1.375901e-01  MLUPS:005832  cache block size:18240kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 34865.32]  time:3.903019e-01  MLUPS:013608  cache block size:18240kiB  reps:2  perf err: 21.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 33347.92]  time:6.412395e-01  MLUPS:021384  cache block size:18240kiB  reps:3  perf err:  4.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 32821.94]  time:8.884302e-01  MLUPS:029160  cache block size:18240kiB  reps:4  perf err:  1.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 43462.68]  time:1.341841e-01  MLUPS:005832  cache block size:24320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 34790.62]  time:3.911399e-01  MLUPS:013608  cache block size:24320kiB  reps:2  perf err: 24.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 33166.84]  time:6.447403e-01  MLUPS:021384  cache block size:24320kiB  reps:3  perf err:  4.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 32445.94]  time:8.987258e-01  MLUPS:029160  cache block size:24320kiB  reps:4  perf err:  2.2%
+[AUTO TUNE] COMPLETE tune case #05: Thread group size:04  thc:01  thx:02  thy:01  thz:02  t_dim:01  bs_z:02  perf:32821.94 MLUP/s
+
+[AUTO TUNE] START tune case #06: Thread group size:04  thc:01  thx:01  thy:02  thz:02  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 43787.87]  time:1.331876e-01  MLUPS:005832  cache block size:18240kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 34781.65]  time:3.912408e-01  MLUPS:013608  cache block size:18240kiB  reps:2  perf err: 25.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 33499.29]  time:6.383420e-01  MLUPS:021384  cache block size:18240kiB  reps:3  perf err:  3.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 32257.68]  time:9.039707e-01  MLUPS:029160  cache block size:18240kiB  reps:4  perf err:  3.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 32318.93]  time:1.142860e+00  MLUPS:036936  cache block size:18240kiB  reps:5  perf err:  0.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 41696.95]  time:1.398663e-01  MLUPS:005832  cache block size:24320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 33241.53]  time:4.093674e-01  MLUPS:013608  cache block size:24320kiB  reps:2  perf err: 25.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 31748.80]  time:6.735374e-01  MLUPS:021384  cache block size:24320kiB  reps:3  perf err:  4.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 31043.39]  time:9.393304e-01  MLUPS:029160  cache block size:24320kiB  reps:4  perf err:  2.3%
+[AUTO TUNE] COMPLETE tune case #06: Thread group size:04  thc:01  thx:01  thy:02  thz:02  t_dim:01  bs_z:02  perf:32318.93 MLUP/s
+
+[AUTO TUNE] START tune case #07: Thread group size:04  thc:01  thx:01  thy:01  thz:04  Possilbe diam width: 8
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 42615.67]  time:1.368511e-01  MLUPS:005832  cache block size:24320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 33410.60]  time:4.072959e-01  MLUPS:013608  cache block size:24320kiB  reps:2  perf err: 27.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 32374.43]  time:6.605212e-01  MLUPS:021384  cache block size:24320kiB  reps:3  perf err:  3.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 31339.47]  time:9.304561e-01  MLUPS:029160  cache block size:24320kiB  reps:4  perf err:  3.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 31340.46]  time:1.178541e+00  MLUPS:036936  cache block size:24320kiB  reps:5  perf err:  0.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 42903.18]  time:1.359340e-01  MLUPS:005832  cache block size:36480kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 33672.06]  time:4.041332e-01  MLUPS:013608  cache block size:36480kiB  reps:2  perf err: 27.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 31880.61]  time:6.707526e-01  MLUPS:021384  cache block size:36480kiB  reps:3  perf err:  5.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 31455.68]  time:9.270185e-01  MLUPS:029160  cache block size:36480kiB  reps:4  perf err:  1.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 41685.74]  time:1.399040e-01  MLUPS:005832  cache block size:48640kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 33732.95]  time:4.034038e-01  MLUPS:013608  cache block size:48640kiB  reps:2  perf err: 23.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 32050.48]  time:6.671975e-01  MLUPS:021384  cache block size:48640kiB  reps:3  perf err:  5.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 31288.78]  time:9.319635e-01  MLUPS:029160  cache block size:48640kiB  reps:4  perf err:  2.4%
+[AUTO TUNE] COMPLETE tune case #07: Thread group size:04  thc:01  thx:01  thy:01  thz:04  t_dim:01  bs_z:08  perf:31455.68 MLUP/s
+
+[AUTO TUNE] START tune case #08: Thread group size:08  thc:01  thx:02  thy:02  thz:02  Possilbe diam width: 8 24
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 35913.76]  time:1.623890e-01  MLUPS:005832  cache block size:9120kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 29984.47]  time:4.538349e-01  MLUPS:013608  cache block size:9120kiB  reps:2  perf err: 19.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 28417.65]  time:7.524901e-01  MLUPS:021384  cache block size:9120kiB  reps:3  perf err:  5.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 27767.66]  time:1.050142e+00  MLUPS:029160  cache block size:9120kiB  reps:4  perf err:  2.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 38464.75]  time:1.516193e-01  MLUPS:005832  cache block size:12160kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 31017.00]  time:4.387272e-01  MLUPS:013608  cache block size:12160kiB  reps:2  perf err: 24.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 29195.81]  time:7.324338e-01  MLUPS:021384  cache block size:12160kiB  reps:3  perf err:  6.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 28772.82]  time:1.013457e+00  MLUPS:029160  cache block size:12160kiB  reps:4  perf err:  1.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 39640.62]  time:1.471218e-01  MLUPS:005832  cache block size:15200kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 32130.19]  time:4.235269e-01  MLUPS:013608  cache block size:15200kiB  reps:2  perf err: 23.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 30601.08]  time:6.987988e-01  MLUPS:021384  cache block size:15200kiB  reps:3  perf err:  5.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 29735.75]  time:9.806377e-01  MLUPS:029160  cache block size:15200kiB  reps:4  perf err:  2.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 29515.28]  time:1.251419e+00  MLUPS:036936  cache block size:15200kiB  reps:5  perf err:  0.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 40957.87]  time:1.423902e-01  MLUPS:005832  cache block size:18240kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 32894.69]  time:4.136838e-01  MLUPS:013608  cache block size:18240kiB  reps:2  perf err: 24.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 31058.67]  time:6.885034e-01  MLUPS:021384  cache block size:18240kiB  reps:3  perf err:  5.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 30705.03]  time:9.496814e-01  MLUPS:029160  cache block size:18240kiB  reps:4  perf err:  1.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 41804.58]  time:1.395063e-01  MLUPS:005832  cache block size:21280kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 33613.24]  time:4.048405e-01  MLUPS:013608  cache block size:21280kiB  reps:2  perf err: 24.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 31835.90]  time:6.716945e-01  MLUPS:021384  cache block size:21280kiB  reps:3  perf err:  5.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 31054.47]  time:9.389954e-01  MLUPS:029160  cache block size:21280kiB  reps:4  perf err:  2.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 30870.95]  time:1.196465e+00  MLUPS:036936  cache block size:21280kiB  reps:5  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 42864.50]  time:1.360567e-01  MLUPS:005832  cache block size:24320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 33723.82]  time:4.035130e-01  MLUPS:013608  cache block size:24320kiB  reps:2  perf err: 27.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 32490.24]  time:6.581668e-01  MLUPS:021384  cache block size:24320kiB  reps:3  perf err:  3.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 31419.24]  time:9.280938e-01  MLUPS:029160  cache block size:24320kiB  reps:4  perf err:  3.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 31239.91]  time:1.182334e+00  MLUPS:036936  cache block size:24320kiB  reps:5  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [014: 43176.62]  time:1.350731e-01  MLUPS:005832  cache block size:27360kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [014: 33982.32]  time:4.004435e-01  MLUPS:013608  cache block size:27360kiB  reps:2  perf err: 27.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [014: 32289.71]  time:6.622543e-01  MLUPS:021384  cache block size:27360kiB  reps:3  perf err:  5.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [014: 31641.18]  time:9.215839e-01  MLUPS:029160  cache block size:27360kiB  reps:4  perf err:  2.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 42718.99]  time:1.365201e-01  MLUPS:005832  cache block size:30400kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 34287.85]  time:3.968753e-01  MLUPS:013608  cache block size:30400kiB  reps:2  perf err: 24.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 32665.36]  time:6.546384e-01  MLUPS:021384  cache block size:30400kiB  reps:3  perf err:  5.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 31689.77]  time:9.201708e-01  MLUPS:029160  cache block size:30400kiB  reps:4  perf err:  3.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 31091.55]  time:1.187976e+00  MLUPS:036936  cache block size:30400kiB  reps:5  perf err:  1.9%
+[AUTO TUNE]   Diamond width:24  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 51294.81]  time:2.652900e-01  MLUPS:013608  cache block size:57760kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 49546.85]  time:7.454763e-01  MLUPS:036936  cache block size:57760kiB  reps:2  perf err:  3.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [002: 48499.88]  time:1.242560e+00  MLUPS:060264  cache block size:57760kiB  reps:3  perf err:  2.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 54781.57]  time:2.484047e-01  MLUPS:013608  cache block size:65664kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 52929.90]  time:6.978286e-01  MLUPS:036936  cache block size:65664kiB  reps:2  perf err:  3.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 53187.24]  time:1.133054e+00  MLUPS:060264  cache block size:65664kiB  reps:3  perf err:  0.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 58666.62]  time:2.319547e-01  MLUPS:013608  cache block size:73568kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 56429.17]  time:6.545551e-01  MLUPS:036936  cache block size:73568kiB  reps:2  perf err:  4.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [006: 56285.03]  time:1.070693e+00  MLUPS:060264  cache block size:73568kiB  reps:3  perf err:  0.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 60193.93]  time:2.260693e-01  MLUPS:013608  cache block size:81472kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 57666.67]  time:6.405087e-01  MLUPS:036936  cache block size:81472kiB  reps:2  perf err:  4.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 57212.91]  time:1.053329e+00  MLUPS:060264  cache block size:81472kiB  reps:3  perf err:  0.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 62630.78]  time:2.172733e-01  MLUPS:013608  cache block size:89376kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 59759.91]  time:6.180733e-01  MLUPS:036936  cache block size:89376kiB  reps:2  perf err:  4.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [010: 59272.00]  time:1.016736e+00  MLUPS:060264  cache block size:89376kiB  reps:3  perf err:  0.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 57152.44]  time:2.381001e-01  MLUPS:013608  cache block size:97280kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 60272.90]  time:6.128127e-01  MLUPS:036936  cache block size:97280kiB  reps:2  perf err:  5.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 60143.49]  time:1.002004e+00  MLUPS:060264  cache block size:97280kiB  reps:3  perf err:  0.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [014: 56553.04]  time:2.406237e-01  MLUPS:013608  cache block size:105184kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [014: 61042.16]  time:6.050900e-01  MLUPS:036936  cache block size:105184kiB  reps:2  perf err:  7.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [014: 61029.00]  time:9.874650e-01  MLUPS:060264  cache block size:105184kiB  reps:3  perf err:  0.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 57102.09]  time:2.383100e-01  MLUPS:013608  cache block size:113088kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 61097.36]  time:6.045433e-01  MLUPS:036936  cache block size:113088kiB  reps:2  perf err:  6.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 60534.67]  time:9.955287e-01  MLUPS:060264  cache block size:113088kiB  reps:3  perf err:  0.9%
+[AUTO TUNE] COMPLETE tune case #08: Thread group size:08  thc:01  thx:02  thy:02  thz:02  t_dim:05  bs_z:14  perf:61029.00 MLUP/s
+
+[AUTO TUNE] START tune case #09: Thread group size:08  thc:01  thx:02  thy:01  thz:04  Possilbe diam width: 8 24
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 38268.67]  time:1.523962e-01  MLUPS:005832  cache block size:12160kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 30133.49]  time:4.515905e-01  MLUPS:013608  cache block size:12160kiB  reps:2  perf err: 27.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 28414.27]  time:7.525795e-01  MLUPS:021384  cache block size:12160kiB  reps:3  perf err:  6.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 27989.81]  time:1.041808e+00  MLUPS:029160  cache block size:12160kiB  reps:4  perf err:  1.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 39193.20]  time:1.488013e-01  MLUPS:005832  cache block size:18240kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 32249.19]  time:4.219640e-01  MLUPS:013608  cache block size:18240kiB  reps:2  perf err: 21.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 30524.90]  time:7.005429e-01  MLUPS:021384  cache block size:18240kiB  reps:3  perf err:  5.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 29638.33]  time:9.838613e-01  MLUPS:029160  cache block size:18240kiB  reps:4  perf err:  3.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 29667.89]  time:1.244983e+00  MLUPS:036936  cache block size:18240kiB  reps:5  perf err:  0.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 41499.87]  time:1.405306e-01  MLUPS:005832  cache block size:24320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 33035.69]  time:4.119181e-01  MLUPS:013608  cache block size:24320kiB  reps:2  perf err: 25.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 31371.22]  time:6.816439e-01  MLUPS:021384  cache block size:24320kiB  reps:3  perf err:  5.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 30962.84]  time:9.417742e-01  MLUPS:029160  cache block size:24320kiB  reps:4  perf err:  1.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 42679.73]  time:1.366457e-01  MLUPS:005832  cache block size:30400kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 33622.59]  time:4.047279e-01  MLUPS:013608  cache block size:30400kiB  reps:2  perf err: 26.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 32022.66]  time:6.677771e-01  MLUPS:021384  cache block size:30400kiB  reps:3  perf err:  5.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 31487.39]  time:9.260851e-01  MLUPS:029160  cache block size:30400kiB  reps:4  perf err:  1.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 43208.12]  time:1.349746e-01  MLUPS:005832  cache block size:36480kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 34652.05]  time:3.927040e-01  MLUPS:013608  cache block size:36480kiB  reps:2  perf err: 24.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 32707.79]  time:6.537892e-01  MLUPS:021384  cache block size:36480kiB  reps:3  perf err:  5.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 32059.99]  time:9.095448e-01  MLUPS:029160  cache block size:36480kiB  reps:4  perf err:  2.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 44381.19]  time:1.314070e-01  MLUPS:005832  cache block size:42560kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 34968.32]  time:3.891522e-01  MLUPS:013608  cache block size:42560kiB  reps:2  perf err: 26.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 33281.02]  time:6.425284e-01  MLUPS:021384  cache block size:42560kiB  reps:3  perf err:  5.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 32340.22]  time:9.016637e-01  MLUPS:029160  cache block size:42560kiB  reps:4  perf err:  2.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 32137.68]  time:1.149305e+00  MLUPS:036936  cache block size:42560kiB  reps:5  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 43814.65]  time:1.331062e-01  MLUPS:005832  cache block size:48640kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 35656.39]  time:3.816427e-01  MLUPS:013608  cache block size:48640kiB  reps:2  perf err: 22.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 32874.51]  time:6.504735e-01  MLUPS:021384  cache block size:48640kiB  reps:3  perf err:  8.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 33074.80]  time:8.816379e-01  MLUPS:029160  cache block size:48640kiB  reps:4  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 44677.94]  time:1.305342e-01  MLUPS:005832  cache block size:54720kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 35771.14]  time:3.804184e-01  MLUPS:013608  cache block size:54720kiB  reps:2  perf err: 24.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 33453.88]  time:6.392083e-01  MLUPS:021384  cache block size:54720kiB  reps:3  perf err:  6.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 32604.95]  time:8.943427e-01  MLUPS:029160  cache block size:54720kiB  reps:4  perf err:  2.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 32574.91]  time:1.133879e+00  MLUPS:036936  cache block size:54720kiB  reps:5  perf err:  0.1%
+[AUTO TUNE]   Diamond width:24  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 49009.07]  time:2.776629e-01  MLUPS:013608  cache block size:65664kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 46957.46]  time:7.865844e-01  MLUPS:036936  cache block size:65664kiB  reps:2  perf err:  4.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 46700.33]  time:1.290441e+00  MLUPS:060264  cache block size:65664kiB  reps:3  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 56000.33]  time:2.429986e-01  MLUPS:013608  cache block size:81472kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 53477.78]  time:6.906794e-01  MLUPS:036936  cache block size:81472kiB  reps:2  perf err:  4.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 53103.08]  time:1.134849e+00  MLUPS:060264  cache block size:81472kiB  reps:3  perf err:  0.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 60180.80]  time:2.261186e-01  MLUPS:013608  cache block size:97280kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 57166.02]  time:6.461181e-01  MLUPS:036936  cache block size:97280kiB  reps:2  perf err:  5.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 56873.52]  time:1.059614e+00  MLUPS:060264  cache block size:97280kiB  reps:3  perf err:  0.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 62053.96]  time:2.192930e-01  MLUPS:013608  cache block size:113088kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 59125.10]  time:6.247093e-01  MLUPS:036936  cache block size:113088kiB  reps:2  perf err:  5.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 58758.57]  time:1.025621e+00  MLUPS:060264  cache block size:113088kiB  reps:3  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 62229.06]  time:2.186760e-01  MLUPS:013608  cache block size:128896kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 60743.63]  time:6.080637e-01  MLUPS:036936  cache block size:128896kiB  reps:2  perf err:  2.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 58581.93]  time:2.322901e-01  MLUPS:013608  cache block size:144704kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 61688.71]  time:5.987481e-01  MLUPS:036936  cache block size:144704kiB  reps:2  perf err:  5.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 60759.30]  time:9.918481e-01  MLUPS:060264  cache block size:144704kiB  reps:3  perf err:  1.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 65357.31]  time:2.082093e-01  MLUPS:013608  cache block size:160512kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 62638.34]  time:5.896708e-01  MLUPS:036936  cache block size:160512kiB  reps:2  perf err:  4.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 62638.00]  time:9.620997e-01  MLUPS:060264  cache block size:160512kiB  reps:3  perf err:  0.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 61838.90]  time:2.200557e-01  MLUPS:013608  cache block size:176320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 63316.61]  time:5.833540e-01  MLUPS:036936  cache block size:176320kiB  reps:2  perf err:  2.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [036: 67508.71]  time:2.015740e-01  MLUPS:013608  cache block size:192128kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [036: 64285.44]  time:5.745624e-01  MLUPS:036936  cache block size:192128kiB  reps:2  perf err:  5.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [036: 63907.78]  time:9.429838e-01  MLUPS:060264  cache block size:192128kiB  reps:3  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 68754.17]  time:1.979225e-01  MLUPS:013608  cache block size:207936kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 65185.85]  time:5.666260e-01  MLUPS:036936  cache block size:207936kiB  reps:2  perf err:  5.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 63830.40]  time:9.441269e-01  MLUPS:060264  cache block size:207936kiB  reps:3  perf err:  2.1%
+[AUTO TUNE] COMPLETE tune case #09: Thread group size:08  thc:01  thx:02  thy:01  thz:04  t_dim:05  bs_z:36  perf:63907.78 MLUP/s
+
+[AUTO TUNE] START tune case #10: Thread group size:08  thc:01  thx:01  thy:02  thz:04  Possilbe diam width: 8 24
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 39681.04]  time:1.469720e-01  MLUPS:005832  cache block size:12160kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 31912.47]  time:4.264164e-01  MLUPS:013608  cache block size:12160kiB  reps:2  perf err: 24.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 29946.61]  time:7.140707e-01  MLUPS:021384  cache block size:12160kiB  reps:3  perf err:  6.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 29467.52]  time:9.895642e-01  MLUPS:029160  cache block size:12160kiB  reps:4  perf err:  1.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 40326.07]  time:1.446211e-01  MLUPS:005832  cache block size:18240kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 31392.67]  time:4.334770e-01  MLUPS:013608  cache block size:18240kiB  reps:2  perf err: 28.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 30572.80]  time:6.994453e-01  MLUPS:021384  cache block size:18240kiB  reps:3  perf err:  2.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 29900.40]  time:9.752379e-01  MLUPS:029160  cache block size:18240kiB  reps:4  perf err:  2.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 38151.93]  time:1.528625e-01  MLUPS:005832  cache block size:24320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 32831.48]  time:4.144802e-01  MLUPS:013608  cache block size:24320kiB  reps:2  perf err: 16.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 30477.19]  time:7.016395e-01  MLUPS:021384  cache block size:24320kiB  reps:3  perf err:  7.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 29778.67]  time:9.792243e-01  MLUPS:029160  cache block size:24320kiB  reps:4  perf err:  2.3%
+[AUTO TUNE]   Diamond width:24  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 57559.14]  time:2.364177e-01  MLUPS:013608  cache block size:65664kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [004: 56632.49]  time:6.522051e-01  MLUPS:036936  cache block size:65664kiB  reps:2  perf err:  1.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 63511.72]  time:2.142597e-01  MLUPS:013608  cache block size:81472kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 61049.88]  time:6.050135e-01  MLUPS:036936  cache block size:81472kiB  reps:2  perf err:  4.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 60721.05]  time:9.924729e-01  MLUPS:060264  cache block size:81472kiB  reps:3  perf err:  0.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 66115.86]  time:2.058205e-01  MLUPS:013608  cache block size:97280kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 63296.14]  time:5.835427e-01  MLUPS:036936  cache block size:97280kiB  reps:2  perf err:  4.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [012: 63003.11]  time:9.565242e-01  MLUPS:060264  cache block size:97280kiB  reps:3  perf err:  0.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 66930.43]  time:2.033156e-01  MLUPS:013608  cache block size:113088kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 64340.24]  time:5.740731e-01  MLUPS:036936  cache block size:113088kiB  reps:2  perf err:  4.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 63592.49]  time:9.476591e-01  MLUPS:060264  cache block size:113088kiB  reps:3  perf err:  1.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 68921.51]  time:1.974420e-01  MLUPS:013608  cache block size:128896kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 66383.40]  time:5.564041e-01  MLUPS:036936  cache block size:128896kiB  reps:2  perf err:  3.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [020: 65698.96]  time:9.172748e-01  MLUPS:060264  cache block size:128896kiB  reps:3  perf err:  1.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 69695.03]  time:1.952507e-01  MLUPS:013608  cache block size:144704kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 67279.50]  time:5.489934e-01  MLUPS:036936  cache block size:144704kiB  reps:2  perf err:  3.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 67027.95]  time:8.990876e-01  MLUPS:060264  cache block size:144704kiB  reps:3  perf err:  0.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 70937.32]  time:1.918313e-01  MLUPS:013608  cache block size:160512kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 68268.38]  time:5.410411e-01  MLUPS:036936  cache block size:160512kiB  reps:2  perf err:  3.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [028: 68281.68]  time:8.825793e-01  MLUPS:060264  cache block size:160512kiB  reps:3  perf err:  0.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 71025.84]  time:1.915922e-01  MLUPS:013608  cache block size:176320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 68984.23]  time:5.354267e-01  MLUPS:036936  cache block size:176320kiB  reps:2  perf err:  3.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 68543.61]  time:8.792067e-01  MLUPS:060264  cache block size:176320kiB  reps:3  perf err:  0.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [036: 72823.36]  time:1.868631e-01  MLUPS:013608  cache block size:192128kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [036: 69214.33]  time:5.336467e-01  MLUPS:036936  cache block size:192128kiB  reps:2  perf err:  5.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [036: 68860.42]  time:8.751617e-01  MLUPS:060264  cache block size:192128kiB  reps:3  perf err:  0.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 73143.30]  time:1.860458e-01  MLUPS:013608  cache block size:207936kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 68823.57]  time:5.366766e-01  MLUPS:036936  cache block size:207936kiB  reps:2  perf err:  6.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 68889.20]  time:8.747961e-01  MLUPS:060264  cache block size:207936kiB  reps:3  perf err:  0.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [044: 71904.55]  time:1.892509e-01  MLUPS:013608  cache block size:223744kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [044: 69673.15]  time:5.301325e-01  MLUPS:036936  cache block size:223744kiB  reps:2  perf err:  3.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [044: 68780.04]  time:8.761845e-01  MLUPS:060264  cache block size:223744kiB  reps:3  perf err:  1.3%
+[AUTO TUNE] COMPLETE tune case #10: Thread group size:08  thc:01  thx:01  thy:02  thz:04  t_dim:05  bs_z:40  perf:68889.20 MLUP/s
+
+[AUTO TUNE] START tune case #11: Thread group size:08  thc:01  thx:01  thy:01  thz:08  Possilbe diam width: 8 24
+[AUTO TUNE]   Diamond width:08  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 40729.82]  time:1.431875e-01  MLUPS:005832  cache block size:18240kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 32599.39]  time:4.174311e-01  MLUPS:013608  cache block size:18240kiB  reps:2  perf err: 24.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 31190.11]  time:6.856019e-01  MLUPS:021384  cache block size:18240kiB  reps:3  perf err:  4.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 30262.03]  time:9.635836e-01  MLUPS:029160  cache block size:18240kiB  reps:4  perf err:  3.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 30482.01]  time:1.211731e+00  MLUPS:036936  cache block size:18240kiB  reps:5  perf err:  0.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 40722.39]  time:1.432136e-01  MLUPS:005832  cache block size:30400kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 32352.23]  time:4.206202e-01  MLUPS:013608  cache block size:30400kiB  reps:2  perf err: 25.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 30748.43]  time:6.954502e-01  MLUPS:021384  cache block size:30400kiB  reps:3  perf err:  5.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 29897.05]  time:9.753471e-01  MLUPS:029160  cache block size:30400kiB  reps:4  perf err:  2.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 29860.77]  time:1.236941e+00  MLUPS:036936  cache block size:30400kiB  reps:5  perf err:  0.1%
+[AUTO TUNE]   Diamond width:24  [wavefronts #: pefromance (MLUPS/s)]
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 58433.77]  time:2.328791e-01  MLUPS:013608  cache block size:81472kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 55627.86]  time:6.639839e-01  MLUPS:036936  cache block size:81472kiB  reps:2  perf err:  5.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [008: 55776.95]  time:1.080446e+00  MLUPS:060264  cache block size:81472kiB  reps:3  perf err:  0.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 59485.28]  time:2.287625e-01  MLUPS:013608  cache block size:113088kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [016: 60213.18]  time:6.134206e-01  MLUPS:036936  cache block size:113088kiB  reps:2  perf err:  1.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 63997.02]  time:2.126349e-01  MLUPS:013608  cache block size:144704kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 61504.88]  time:6.005378e-01  MLUPS:036936  cache block size:144704kiB  reps:2  perf err:  4.1%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [024: 61320.14]  time:9.827767e-01  MLUPS:060264  cache block size:144704kiB  reps:3  perf err:  0.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 58399.93]  time:2.330140e-01  MLUPS:013608  cache block size:176320kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 63845.68]  time:5.785200e-01  MLUPS:036936  cache block size:176320kiB  reps:2  perf err:  8.5%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [032: 63102.62]  time:9.550158e-01  MLUPS:060264  cache block size:176320kiB  reps:3  perf err:  1.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 68979.15]  time:1.972770e-01  MLUPS:013608  cache block size:207936kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 65916.12]  time:5.603485e-01  MLUPS:036936  cache block size:207936kiB  reps:2  perf err:  4.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [040: 65313.48]  time:9.226886e-01  MLUPS:060264  cache block size:207936kiB  reps:3  perf err:  0.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [048: 70654.88]  time:1.925982e-01  MLUPS:013608  cache block size:239552kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [048: 68073.48]  time:5.425901e-01  MLUPS:036936  cache block size:239552kiB  reps:2  perf err:  3.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [048: 67471.12]  time:8.931821e-01  MLUPS:060264  cache block size:239552kiB  reps:3  perf err:  0.9%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [056: 71393.71]  time:1.906050e-01  MLUPS:013608  cache block size:271168kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [056: 68929.58]  time:5.358512e-01  MLUPS:036936  cache block size:271168kiB  reps:2  perf err:  3.6%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [056: 67020.65]  time:8.991855e-01  MLUPS:060264  cache block size:271168kiB  reps:3  perf err:  2.8%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [056: 67505.88]  time:1.238292e+00  MLUPS:083592  cache block size:271168kiB  reps:4  perf err:  0.7%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [064: 73753.38]  time:1.845068e-01  MLUPS:013608  cache block size:302784kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [064: 68690.95]  time:5.377127e-01  MLUPS:036936  cache block size:302784kiB  reps:2  perf err:  7.4%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [064: 68823.19]  time:8.756351e-01  MLUPS:060264  cache block size:302784kiB  reps:3  perf err:  0.2%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [072: 73184.19]  time:1.859418e-01  MLUPS:013608  cache block size:334400kiB  reps:1  perf err: 100.0%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [072: 68820.44]  time:5.367010e-01  MLUPS:036936  cache block size:334400kiB  reps:2  perf err:  6.3%
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+[AUTO TUNE]     [072: 68528.00]  time:8.794070e-01  MLUPS:060264  cache block size:334400kiB  reps:3  perf err:  0.4%
+[AUTO TUNE] COMPLETE tune case #11: Thread group size:08  thc:01  thx:01  thy:01  thz:08  t_dim:05  bs_z:64  perf:68823.19 MLUP/s
+[AUTO TUNE]  Tuning time: 185.8 seconds
+###INFO: Modified nt from 1000 to 1010 for the intra-diamond method to work properly
+Started on Fri Aug  1 10:29:48 2025
+
+******************************************************
+Parameters settings
+******************************************************
+Time stepper name: Diamond
+Stencil Kernel name: star
+Stencil Kernel semi-bandwidth: 2
+Stencil Kernel coefficients: constant
+Precision: DP
+Global domain    size:1944000000    nx:600    ny:1800    nz:1800
+Rank 0 domain    size:1944000000    nx:600    ny:1800    nz:1800
+Number of time steps: 1010
+Alignment size: 8 Bytes
+Number of tests: 3
+Verify:   0
+Source point enabled: 0
+Time unroll:   5
+Using separate call to central line update: 0
+Halo concatenation: 0
+Enable wavefronts: 1
+Wavefront parallel strategy: Wavefront
+Intra-diamond width:   24
+Wavefront width:  60
+Cache block size/wf (kiB): 12996
+Total cache block size (kiB): 207936
+Next larger cache block size/wf (kiB): 18316 (diam_width=32)
+Intra-diamond prologue/epilogue MStencils: 13608
+Multi-wavefront updates: 40
+User set thread group size: -1
+Thread group size: 8
+Threads along z-axis: 4
+Threads along y-axis: 2
+Threads along x-axis: 1
+Threads per cell    : 1
+Threads block: 1
+Threads stride: 1
+OpenMP Threads: 128
+Assumed usable cache size: 0KiB
+MPI size: 1
+Processors topology (npx, npy, npz): 01,01,01
+******************************************************
+alignment error
+[rank=0] alloc. dom(err=0):29.484703GiB coef(err=0):0.000000GiB total:29.484703GiB
+
+******************************************************
+Performance results
+******************************************************
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Rank 0 TEST#01 time: 2.957638e+01
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Rank 0 TEST#02 time: 2.911323e+01
+OMP: Info #276: omp_set_nested routine deprecated, please use omp_set_max_active_levels instead.
+Rank 0 TEST#03 time: 2.910791e+01
+******************************************************
+Total memory allocation per MPI rank: 45288 MiB
+Total time(s): 8.779753e+01
+time/test(s): 2.926584e+01
+
+Total RANK0 MStencil/s MIN: 66385.399596  
+Total RANK0 MStencil/s MAX: 67453.824852  
+******************************************************
+MWD main-loop RANK0 MStencil/s MIN: 66574.273475
+MWD main-loop RANK0 MStencil/s MAX: 67652.907191
+******************************************************
+RANK0 ts main loop:         28.821341 (s) - 99.02%
+RANK0 ts prologue/epilogue: 0.285700 (s) - 00.98%
+RANK0 ts others:            0.000871 (s) - 00.00%
+******************************************************
+Metric \ core:                  core 00       core 01       core 02       core 03       core 04       core 05       core 06       core 07       core 08       core 09       core 10       core 11       core 12       core 13       core 14       core 15       core 16       core 17       core 18       core 19       core 20       core 21       core 22       core 23       core 24       core 25       core 26       core 27       core 28       core 29       core 30       core 31       core 32       core 33       core 34       core 35       core 36       core 37       core 38       core 39       core 40       core 41       core 42       core 43       core 44       core 45       core 46       core 47       core 48       core 49       core 50       core 51       core 52       core 53       core 54       core 55       core 56       core 57       core 58       core 59       core 60       core 61       core 62       core 63       core 64       core 65       core 66       core 67       core 68       core 69       core 70       core 71       core 72       core 73       core 74       core 75       core 76       core 77       core 78       core 79       core 80       core 81       core 82       core 83       core 84       core 85       core 86       core 87       core 88       core 89       core 90       core 91       core 92       core 93       core 94       core 95       core 96       core 97       core 98       core 99       core 100       core 101       core 102       core 103       core 104       core 105       core 106       core 107       core 108       core 109       core 110       core 111       core 112       core 113       core 114       core 115       core 116       core 117       core 118       core 119       core 120       core 121       core 122       core 123       core 124       core 125       core 126       core 127     
+Wavefront synchronization [s]:  3.285071e+00  4.883200e+00  1.358719e+00  3.018258e+00  1.284026e+00  2.915147e+00  6.789886e-01  2.567857e+00  3.258217e+00  4.805070e+00  1.336541e+00  2.936341e+00  1.243809e+00  2.823449e+00  6.233789e-01  2.480178e+00  3.253620e+00  4.762842e+00  1.319567e+00  2.915801e+00  1.229597e+00  2.796084e+00  6.158185e-01  2.458503e+00  3.237646e+00  4.881596e+00  1.337265e+00  3.012758e+00  1.223418e+00  2.905304e+00  6.366409e-01  2.584656e+00  3.195236e+00  4.828372e+00  1.285908e+00  2.963533e+00  1.185084e+00  2.856135e+00  6.100976e-01  2.533456e+00  3.204457e+00  4.855272e+00  1.299494e+00  2.983632e+00  1.209684e+00  2.860878e+00  6.041637e-01  2.526210e+00  3.224111e+00  4.795891e+00  1.294008e+00  2.931073e+00  1.208963e+00  2.803694e+00  6.022760e-01  2.459349e+00  3.228452e+00  4.877578e+00  1.308433e+00  2.994652e+00  1.202746e+00  2.895090e+00  6.330476e-01  2.562532e+00  3.110619e+00  4.853809e+00  1.282908e+00  3.005588e+00  1.184369e+00  2.957222e+00  6.204483e-01  2.644750e+00  3.186245e+00  4.851180e+00  1.319799e+00  2.971806e+00  1.221230e+00  2.902132e+00  6.477154e-01  2.566010e+00  3.210800e+00  4.846352e+00  1.328736e+00  3.011176e+00  1.255440e+00  2.907155e+00  6.617899e-01  2.581025e+00  3.206587e+00  4.925844e+00  1.357502e+00  3.072594e+00  1.278155e+00  2.974811e+00  6.929063e-01  2.712913e+00  3.199755e+00  4.908111e+00  1.307177e+00  3.041077e+00  1.214406e+00  2.926495e+00  6.612663e-01  2.689112e+00  3.267976e+00  4.863187e+00  1.317935e+00  2.998369e+00  1.270488e+00  2.916232e+00  7.071681e-01  2.605761e+00  3.160788e+00  4.864117e+00  1.284151e+00  2.989710e+00  1.210538e+00  2.906002e+00  6.270126e-01  2.569608e+00  3.141522e+00  4.856164e+00  1.276195e+00  3.062113e+00  1.182686e+00  2.935457e+00  6.186410e-01  2.673907e+00
+Wavefront synchronization [%]:  11.29         16.78         04.67         10.37         04.41         10.02         02.33         08.82         11.19         16.51         04.59         10.09         04.27         09.70         02.14         08.52         11.18         16.36         04.53         10.02         04.22         09.61         02.12         08.45         11.12         16.77         04.59         10.35         04.20         09.98         02.19         08.88         10.98         16.59         04.42         10.18         04.07         09.81         02.10         08.70         11.01         16.68         04.46         10.25         04.16         09.83         02.08         08.68         11.08         16.48         04.45         10.07         04.15         09.63         02.07         08.45         11.09         16.76         04.50         10.29         04.13         09.95         02.17         08.80         10.69         16.68         04.41         10.33         04.07         10.16         02.13         09.09         10.95         16.67         04.53         10.21         04.20         09.97         02.23         08.82         11.03         16.65         04.56         10.35         04.31         09.99         02.27         08.87         11.02         16.92         04.66         10.56         04.39         10.22         02.38         09.32         10.99         16.86         04.49         10.45         04.17         10.05         02.27         09.24         11.23         16.71         04.53         10.30         04.36         10.02         02.43         08.95         10.86         16.71         04.41         10.27         04.16         09.98         02.15         08.83         10.79         16.68         04.38         10.52         04.06         10.09         02.13         09.19       
+
+Metric \ thread group:       group 00      group 01      group 02      group 03      group 04      group 05      group 06      group 07      group 08      group 09      group 10      group 11      group 12      group 13      group 14      group 15    
+Wavefront steady state [s]:  2.813471e+01  2.815494e+01  2.817566e+01  2.816706e+01  2.818080e+01  2.817387e+01  2.815610e+01  2.812317e+01  2.818095e+01  2.823026e+01  2.820379e+01  2.821124e+01  2.823364e+01  2.821721e+01  2.819634e+01  2.819236e+01
+Wavefront steady state [%]:  96.66         96.73         96.80         96.77         96.82         96.79         96.73         96.62         96.82         96.99         96.90         96.92         97.00         96.94         96.87         96.86       
+Wavefront startup/end [s]:   9.130686e-01  9.196476e-01  8.790120e-01  8.936451e-01  9.024169e-01  9.001790e-01  9.292065e-01  9.634138e-01  8.672867e-01  8.556468e-01  8.536554e-01  8.572175e-01  8.552672e-01  8.767628e-01  8.653217e-01  8.803777e-01
+Wavefront startup/end [%]:   03.14         03.16         03.02         03.07         03.10         03.09         03.19         03.31         02.98         02.94         02.93         02.95         02.94         03.01         02.97         03.02       
+Wavefront communication [s]:  2.453104e-04  2.523288e-04  2.377275e-04  2.567079e-04  2.538189e-04  2.546776e-04  2.450626e-04  2.463311e-04  1.322478e-04  1.581106e-04  1.525525e-04  1.617838e-04  1.388658e-04  1.671165e-04  1.486186e-04  1.632404e-04
+Wavefront communication [%]:  00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00       
+Wavefront others [s]:        5.901839e-02  3.220438e-02  5.212962e-02  4.607775e-02  2.356562e-02  3.273369e-02  2.149212e-02  2.021154e-02  5.867308e-02  2.097137e-02  4.944605e-02  3.841784e-02  1.799568e-02  1.290153e-02  4.523117e-02  3.413969e-02
+Wavefront others [%]:        00.20         00.11         00.18         00.16         00.08         00.11         00.07         00.07         00.20         00.07         00.17         00.13         00.06         00.04         00.16         00.12       
+Group spin-wait [s]:         2.258085e-05  2.227537e-05  2.541766e-05  2.636947e-05  2.249144e-05  2.301857e-05  2.269819e-05  2.279319e-05  2.321601e-05  2.297387e-05  2.215803e-05  2.258644e-05  2.211891e-05  2.286769e-05  2.285652e-05  2.274103e-05
+Group spin-wait [%]:         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00       
+Resolved diamonds:           7.825000e+02  7.825000e+02  7.830000e+02  7.830000e+02  7.850000e+02  7.820000e+02  7.835000e+02  7.810000e+02  7.840000e+02  7.830000e+02  7.820000e+02  7.820000e+02  7.830000e+02  7.820000e+02  7.830000e+02  7.835000e+02
+******************************************************
+COMPLETED SUCCESSFULLY on Fri Aug  1 10:31:17 2025

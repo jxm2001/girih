@@ -580,9 +580,7 @@ void get_tgs_tune_params_lists(Parameters *p, Tune_Params **ret_tune_cases_l, in
   int *tgs_l, *thz_l, *thy_l, *thx_l, *thc_l, *tgs_factors_l;
   Tune_Params *tune_cases_l;
 
-  // Only test tgs not greater than 8(CCD)
-  // max_tgs = p->num_threads;
-  max_tgs = p->num_threads < 8 ? p->num_threads : 8;
+  max_tgs = p->num_threads;
   if(p->num_threads > MAX_THREAD_GROUP_SIZE){
     max_tgs = MAX_THREAD_GROUP_SIZE;
     printf("INFO: Using maximum configured thread group size %d\n", MAX_THREAD_GROUP_SIZE);

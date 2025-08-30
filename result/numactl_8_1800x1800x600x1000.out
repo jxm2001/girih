@@ -1,0 +1,84 @@
+INFO: Using maximum configured thread group size 8
+###INFO: Modified nt from 1000 to 1010 for the intra-diamond method to work properly
+Started on Fri Aug  1 14:47:53 2025
+
+******************************************************
+Parameters settings
+******************************************************
+Time stepper name: Diamond
+Stencil Kernel name: box
+Stencil Kernel semi-bandwidth: 1
+Stencil Kernel coefficients: constant
+Precision: DP
+Global domain    size:1944000000    nx:600    ny:1800    nz:1800
+Rank 0 domain    size:1944000000    nx:600    ny:1800    nz:1800
+Number of time steps: 1010
+Alignment size: 8 Bytes
+Number of tests: 1
+Verify:   0
+Source point enabled: 0
+Time unroll:   11
+Using separate call to central line update: 0
+Halo concatenation: 0
+Enable wavefronts: 1
+Wavefront parallel strategy: Relaxed synchronization wavefront
+Intra-diamond width:   24
+Wavefront width:  46
+Cache block size/wf (kiB): 8645
+Total cache block size (kiB): 138320
+Next larger cache block size/wf (kiB): 10583 (diam_width=28)
+Intra-diamond prologue/epilogue MStencils: 25272
+Multi-wavefront updates: 24
+User set thread group size: 8
+Thread group size: 8
+Threads along z-axis: 8
+Threads along y-axis: 1
+Threads along x-axis: 1
+Threads per cell    : 1
+Threads block: 1
+Threads stride: 1
+OpenMP Threads: 128
+Assumed usable cache size: 0KiB
+MPI size: 1
+Processors topology (npx, npy, npz): 01,01,01
+******************************************************
+alignment error
+[rank=0] alloc. dom(err=0):29.419363GiB coef(err=0):0.000000GiB total:29.419363GiB
+
+******************************************************
+Performance results
+******************************************************
+Rank 0 TEST#01 time: 2.958650e+01
+******************************************************
+Total memory allocation per MPI rank: 45188 MiB
+Total time(s): 2.958650e+01
+time/test(s): 2.958650e+01
+
+Total RANK0 MStencil/s MIN: 66362.691926  
+Total RANK0 MStencil/s MAX: 66362.691926  
+******************************************************
+MWD main-loop RANK0 MStencil/s MIN: 66783.819163
+MWD main-loop RANK0 MStencil/s MAX: 66783.819163
+******************************************************
+RANK0 ts main loop:         29.021521 (s) - 98.09%
+RANK0 ts prologue/epilogue: 0.563621 (s) - 01.90%
+RANK0 ts others:            0.001361 (s) - 00.00%
+******************************************************
+Metric \ core:                  core 00       core 01       core 02       core 03       core 04       core 05       core 06       core 07       core 08       core 09       core 10       core 11       core 12       core 13       core 14       core 15       core 16       core 17       core 18       core 19       core 20       core 21       core 22       core 23       core 24       core 25       core 26       core 27       core 28       core 29       core 30       core 31       core 32       core 33       core 34       core 35       core 36       core 37       core 38       core 39       core 40       core 41       core 42       core 43       core 44       core 45       core 46       core 47       core 48       core 49       core 50       core 51       core 52       core 53       core 54       core 55       core 56       core 57       core 58       core 59       core 60       core 61       core 62       core 63       core 64       core 65       core 66       core 67       core 68       core 69       core 70       core 71       core 72       core 73       core 74       core 75       core 76       core 77       core 78       core 79       core 80       core 81       core 82       core 83       core 84       core 85       core 86       core 87       core 88       core 89       core 90       core 91       core 92       core 93       core 94       core 95       core 96       core 97       core 98       core 99       core 100       core 101       core 102       core 103       core 104       core 105       core 106       core 107       core 108       core 109       core 110       core 111       core 112       core 113       core 114       core 115       core 116       core 117       core 118       core 119       core 120       core 121       core 122       core 123       core 124       core 125       core 126       core 127     
+Wavefront synchronization [s]:  3.481237e-01  3.388200e-01  4.557609e-01  4.497128e-01  4.361280e-01  4.296697e-01  3.954864e-01  4.310437e-01  3.355872e-01  3.086100e-01  4.348650e-01  4.278685e-01  4.229269e-01  4.077783e-01  4.103736e-01  3.978751e-01  3.525865e-01  3.095699e-01  4.371193e-01  4.299514e-01  4.091124e-01  4.222396e-01  4.067347e-01  3.914023e-01  3.246515e-01  2.965054e-01  4.233669e-01  4.081106e-01  4.105887e-01  4.006439e-01  3.945354e-01  3.897378e-01  3.231453e-01  2.960016e-01  4.248817e-01  4.151932e-01  4.062313e-01  3.934365e-01  3.844975e-01  3.818222e-01  3.319783e-01  3.031046e-01  4.350536e-01  4.162332e-01  4.111537e-01  4.119514e-01  4.024404e-01  3.853731e-01  3.575086e-01  3.159437e-01  4.403971e-01  4.190008e-01  4.136421e-01  4.129699e-01  4.098393e-01  3.979193e-01  3.675679e-01  3.203481e-01  4.342982e-01  4.432179e-01  4.301657e-01  4.264489e-01  4.085145e-01  4.119799e-01  3.023461e-01  2.834336e-01  4.073608e-01  3.964454e-01  3.870981e-01  3.791613e-01  3.755156e-01  3.638660e-01  3.164688e-01  2.934799e-01  4.211295e-01  4.056013e-01  4.002676e-01  3.992017e-01  3.852556e-01  3.756365e-01  3.176277e-01  2.959401e-01  4.179586e-01  4.104110e-01  3.981601e-01  3.954811e-01  3.936056e-01  3.813489e-01  3.567297e-01  3.320565e-01  4.615947e-01  4.524430e-01  4.101193e-01  4.386284e-01  4.314122e-01  4.163965e-01  3.318282e-01  3.013985e-01  4.320821e-01  4.204135e-01  4.130707e-01  4.074593e-01  3.985456e-01  3.906076e-01  4.108137e-01  3.302609e-01  4.762352e-01  4.631212e-01  4.563212e-01  4.409208e-01  4.482880e-01  4.282657e-01  3.513445e-01  3.205908e-01  4.443683e-01  4.307440e-01  4.220095e-01  4.254818e-01  4.028599e-01  3.811378e-01  3.201476e-01  2.924201e-01  4.237387e-01  4.154685e-01  4.067907e-01  3.995004e-01  3.855118e-01  3.816093e-01
+Wavefront synchronization [%]:  01.18         01.15         01.54         01.52         01.47         01.45         01.34         01.46         01.13         01.04         01.47         01.45         01.43         01.38         01.39         01.34         01.19         01.05         01.48         01.45         01.38         01.43         01.37         01.32         01.10         01.00         01.43         01.38         01.39         01.35         01.33         01.32         01.09         01.00         01.44         01.40         01.37         01.33         01.30         01.29         01.12         01.02         01.47         01.41         01.39         01.39         01.36         01.30         01.21         01.07         01.49         01.42         01.40         01.40         01.39         01.34         01.24         01.08         01.47         01.50         01.45         01.44         01.38         01.39         01.02         00.96         01.38         01.34         01.31         01.28         01.27         01.23         01.07         00.99         01.42         01.37         01.35         01.35         01.30         01.27         01.07         01.00         01.41         01.39         01.35         01.34         01.33         01.29         01.21         01.12         01.56         01.53         01.39         01.48         01.46         01.41         01.12         01.02         01.46         01.42         01.40         01.38         01.35         01.32         01.39         01.12         01.61         01.57         01.54         01.49         01.52         01.45         01.19         01.08         01.50         01.46         01.43         01.44         01.36         01.29         01.08         00.99         01.43         01.40         01.37         01.35         01.30         01.29       
+
+Metric \ thread group:       group 00      group 01      group 02      group 03      group 04      group 05      group 06      group 07      group 08      group 09      group 10      group 11      group 12      group 13      group 14      group 15    
+Wavefront steady state [s]:  2.808769e+01  2.814093e+01  2.815327e+01  2.813208e+01  2.814607e+01  2.812845e+01  2.810812e+01  2.819548e+01  2.808863e+01  2.807475e+01  2.812785e+01  2.819559e+01  2.814146e+01  2.817569e+01  2.812620e+01  2.815167e+01
+Wavefront steady state [%]:  94.94         95.12         95.16         95.09         95.14         95.08         95.01         95.30         94.94         94.89         95.07         95.30         95.12         95.24         95.07         95.15       
+Wavefront startup/end [s]:   1.369158e+00  1.347211e+00  1.320646e+00  1.347476e+00  1.340684e+00  1.361835e+00  1.319534e+00  1.343767e+00  1.365303e+00  1.361259e+00  1.359803e+00  1.323896e+00  1.336507e+00  1.331549e+00  1.356918e+00  1.320944e+00
+Wavefront startup/end [%]:   04.63         04.55         04.46         04.55         04.53         04.60         04.46         04.54         04.61         04.60         04.60         04.47         04.52         04.50         04.59         04.46       
+Wavefront communication [s]:  7.675961e-05  5.441904e-05  7.632747e-05  6.209314e-05  6.434321e-05  4.389696e-05  6.330200e-05  4.874915e-05  2.720952e-05  2.707168e-05  1.990423e-05  3.213808e-05  2.034940e-05  3.142469e-05  2.160482e-05  4.639290e-05
+Wavefront communication [%]:  00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00       
+Wavefront others [s]:        1.282169e-01  9.694252e-02  1.111482e-01  1.055284e-01  9.832889e-02  9.481513e-02  1.574237e-01  4.584938e-02  1.311818e-01  1.491058e-01  9.746703e-02  6.562354e-02  1.071550e-01  7.787520e-02  1.020037e-01  1.124848e-01
+Wavefront others [%]:        00.43         00.33         00.38         00.36         00.33         00.32         00.53         00.15         00.44         00.50         00.33         00.22         00.36         00.26         00.34         00.38       
+Group spin-wait [s]:         1.154654e-05  1.158006e-05  1.370162e-05  1.533888e-05  1.128390e-05  1.529790e-05  1.182966e-05  1.138635e-05  1.249835e-05  1.247972e-05  1.276657e-05  1.262873e-05  1.213886e-05  1.255795e-05  1.331419e-05  1.243129e-05
+Group spin-wait [%]:         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00         00.00       
+Resolved diamonds:           3.885000e+02  3.885000e+02  3.895000e+02  3.895000e+02  3.895000e+02  3.890000e+02  3.880000e+02  3.890000e+02  3.895000e+02  3.885000e+02  3.895000e+02  3.895000e+02  3.890000e+02  3.885000e+02  3.895000e+02  3.895000e+02
+******************************************************
+COMPLETED SUCCESSFULLY on Fri Aug  1 14:48:24 2025
